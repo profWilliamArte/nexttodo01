@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import {pool} from '@/libs/mysql'; 
 export async  function GET(){
     try {
-        const result = await pool.query("SELECT * FROM porhacer");
+        const result = await pool.query("SELECT * FROM porhacer order by id desc");
         return NextResponse.json(result)
     } catch (error) {
         console.log('Error al listar los todo', error);

@@ -25,7 +25,7 @@ const Botones = ({id, completado}) => {
         router.push(`/crear/edit/${id}`);
     }
     const completarTarea = async (id) => {
-      alert("completando la tarea "+id);
+      router.push(`/completado/${id}`);
       
   }; 
     
